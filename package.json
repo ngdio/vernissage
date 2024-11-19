@@ -1,0 +1,22 @@
+{
+  "name": "vernissage",
+  "version": "0.1.0",
+  "description": "Photography-focused portfolio theme for Eleventy based on Tailwind",
+  "scripts": {
+    "build": "pnpm run cleanup && pnpx @11ty/eleventy",
+    "dev": "pnpx @11ty/eleventy --serve --port 3000 --incremental",
+    "cleanup": "pnpm dlx rimraf _site _tmp .cache"
+  },
+  "keywords": [],
+  "author": "Niklas Graeber <dev@n1klas.net>",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-vite": "^5.0.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "vite": "^5.4.11"
+  }
+}

@@ -9,9 +9,8 @@
   <meta name="description"
     content="Hello there, I'm Sophia Williams – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other.">
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-  <link rel="stylesheet" href="output.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
   <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- Start - Fonts -->
@@ -29,7 +28,7 @@
     <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
       <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
-          <a href="../index.html" class="text-2xl font-signika font-bold">SOPHIA WILLIAMS</a>
+          <a href="/" class="text-2xl font-signika font-bold">SOPHIA WILLIAMS</a>
         </div>
         <div class="ml-auto md:hidden flex items-center justify-start">
           <button onclick="menuToggle()" @click="open = !open"
@@ -54,19 +53,19 @@
           <ul id="ulMenu"
             class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
             <li class="group transition duration-300">
-              <a href="../index.html" class="font-signika text-2xl">PORTFOLIO
+              <a href="/" class="font-signika text-2xl">PORTFOLIO
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white">
                 </span>
               </a>
             </li>
             <li class="group transition duration-300">
-              <a href="about_me.html" class="font-signika text-2xl">ABOUT ME
+              <a href="/about_me" class="font-signika text-2xl">ABOUT ME
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li>
             <li class="group transition duration-300">
-              <a href="contact.html" class="font-signika text-2xl">CONTACT
+              <a href="/contact" class="font-signika text-2xl">CONTACT
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white">
                 </span>
@@ -84,7 +83,7 @@
       <div class="col-span-2 md:col-span-1">
         <div
           class="bg-white dark:bg-neutral-900 p-5 pb-28 m-6 md:m-12 shadow-lg border border-gray-100 dark:border-neutral-800 hover:rotate-0 transition duration-500 -rotate-6 relative">
-          <img src="./assets/Avatar.png" alt=""
+          <img src="/assets/Avatar.png" alt=""
             class="smooth-edges flex flex-col w-full aspect-square object-cover h-auto" />
           <div class="absolute bottom-0 left-0 right-0 text-center">
             <p class="text-gray-800 dark:text-slate-200 pb-7 h-full text-6xl font-nothingyoucoulddo">me</p>
@@ -178,8 +177,8 @@
       </p>
     </div>
   </footer>
-  <script src="fade_in.js"></script>
-  <script src="menu.js"></script>
+  <script type="module" src="{{ '/assets/js/fade_in.js' | url }}"></script>
+  <script type="module" src="{{ '/assets/js/menu.js' | url }}"></script>
 </body>
 
 </html>
