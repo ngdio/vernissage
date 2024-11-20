@@ -32,8 +32,7 @@ export default async function(eleventyConfig) {
     viteOptions,
   });
 
-  eleventyConfig.addPassthroughCopy("src/assets/css");
-  eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/assets");
 
   return {
     templateFormats: ["md", "njk", "html"],
