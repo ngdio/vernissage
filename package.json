@@ -5,7 +5,8 @@
   "scripts": {
     "build": "pnpm run cleanup && pnpx @11ty/eleventy",
     "dev": "pnpx @11ty/eleventy --serve --port 3000 --incremental",
-    "cleanup": "pnpm dlx rimraf _site _tmp .cache"
+    "cleanup": "pnpm dlx rimraf _site _tmp .cache",
+    "serve-build": "pnpm dlx http-server _site --port 4000"
   },
   "keywords": [],
   "author": "Niklas Graeber <dev@n1klas.net>",
