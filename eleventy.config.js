@@ -7,19 +7,10 @@ const viteOptions = {
     middlewareMode: true
   },
   appType: "custom",
-  assetsInclude: ["**/*.xml", "**/*.txt"],
   build: {
     mode: "production",
     sourcemap: "true",
     manifest: true,
-    rollupOptions: {
-      output: {
-        assetFileNames: "assets/css/main.[hash].css",
-        chunkFileNames: "assets/js/[name].[hash].js",
-        entryFileNames: "assets/js/[name].[hash].js",
-      },
-      plugins: [],
-    },
   },
 };
 
