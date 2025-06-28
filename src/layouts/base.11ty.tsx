@@ -5,7 +5,7 @@ import meta from "../data/meta.json"
 
 export function BaseLayout({ content, title, description, scripts, page }: ViewProps): JSX.Element {
     return (
-        <html lang="{meta.lang}" class="scroll-smooth">
+        <html lang={meta.lang} class="scroll-smooth">
         <head>
             <meta charSet="UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
