@@ -1,5 +1,5 @@
 export default {
-  content: ["./src/**/*.{html,js,md,njk}"],
+  content: ["./src/**/*.{html,md,njk,js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
     extend:
