@@ -2,8 +2,8 @@ name: Deploy demo site
 
 on:
   push:
-    branches: [$default-branch]
-  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
