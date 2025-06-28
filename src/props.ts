@@ -13,6 +13,7 @@ export interface EleventyPage {
 export type ViewProps = {
   content?: string
   title?: string
+  description?: string
   scripts?: string
   page?: EleventyPage
 }
