@@ -1,4 +1,7 @@
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
+import ViteReactPlugin from '@vitejs/plugin-react'
+import "tsx/esm";
+import { jsxToString } from "jsx-async-runtime";
 
 const viteOptions = {
   publicDir: "public",
@@ -12,6 +15,7 @@ const viteOptions = {
     sourcemap: "true",
     manifest: true,
   },
+  plugins: [ViteReactPlugin()],
 };
 
 export default async function(eleventyConfig) {
@@ -23,10 +27,25 @@ export default async function(eleventyConfig) {
     viteOptions,
   });
 
+  eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
+		key: "11ty.js",
+		compile: function () {
+			return async function (data) {
+				let content = await this.defaultRenderer(data);
+        const result = await jsxToString(content);
+        return `<!doctype html>\n${result}`;
+			};
+		},
+	});
+  
+  eleventyConfig.addTemplateFormats("11ty.ts,11ty.tsx");
+
+  eleventyConfig.addWatchTarget("src/includes");
+
   eleventyConfig.addPassthroughCopy("src/assets");
 
   return {
-    templateFormats: ["md", "njk", "html"],
+    templateFormats: ["md", "njk", "html", "tsx"],
     htmlTemplateEngine: "njk",
     passthroughFileCopy: true,
     dir: {
