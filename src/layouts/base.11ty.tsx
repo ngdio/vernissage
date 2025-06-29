@@ -3,7 +3,7 @@ import { Header } from "../includes/header"
 import { Footer } from "../includes/footer"
 import meta from "../data/meta.json"
 
-export function BaseLayout({ content, title, description, scripts, page }: ViewProps): JSX.Element {
+export function BaseLayout({ content, title, description, scripts, page, children }: ViewProps): JSX.Element {
     return (
         <html lang={meta.lang} class="scroll-smooth">
         <head>
@@ -20,7 +20,7 @@ export function BaseLayout({ content, title, description, scripts, page }: ViewP
         <body class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
             <Header page={page} />
             <div class="container mx-auto">
-            {content}
+            {content || children}
             </div>
             <Footer />
             <script type="module" src="/assets/js/main.js"></script>

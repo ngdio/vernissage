@@ -16,4 +16,5 @@ export type ViewProps = {
   description?: string
   scripts?: string
   page?: EleventyPage
+  children?: JSX.Element[]
 }
