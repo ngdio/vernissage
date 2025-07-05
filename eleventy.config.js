@@ -1,5 +1,6 @@
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import ViteReactPlugin from '@vitejs/plugin-react'
+import ViteTailwindPlugin from '@tailwindcss/vite'
 import "tsx/esm";
 import { jsxToString } from "jsx-async-runtime";
 
@@ -15,7 +16,10 @@ const viteOptions = {
     sourcemap: "true",
     manifest: true,
   },
-  plugins: [ViteReactPlugin()],
+  plugins: [
+    ViteReactPlugin(),
+    ViteTailwindPlugin()
+  ],
 };
 
 export default async function(eleventyConfig) {
