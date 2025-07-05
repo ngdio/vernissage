@@ -49,8 +49,8 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
   return {
-    templateFormats: ["md", "njk", "html", "tsx"],
-    htmlTemplateEngine: "njk",
+    templateFormats: ["md", "html", "tsx"],
+    htmlTemplateEngine: false,
     passthroughFileCopy: true,
     dir: {
       input: "src",
