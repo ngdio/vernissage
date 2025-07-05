@@ -1,6 +1,9 @@
 @import "./fonts.css";
 
 @import "tailwindcss";
+@source inline("grid-cols-{2..10}");
+@source inline("row-span-{2..10}");
+@source inline("col-span-{2..10}");
 
 @layer utilities {
   .tap-highlight-transparent {
