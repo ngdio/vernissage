@@ -14,6 +14,7 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-vite": "^5.0.2",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",

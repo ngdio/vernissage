@@ -2,5 +2,6 @@ node_modules/
 
 _site/
 _tmp/
+.cache/
 
 .DS_Store

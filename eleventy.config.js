@@ -3,6 +3,7 @@ import ViteReactPlugin from '@vitejs/plugin-react'
 import ViteTailwindPlugin from '@tailwindcss/vite'
 import "tsx/esm";
 import { jsxToString } from "jsx-async-runtime";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 const viteOptions = {
   publicDir: "public",
@@ -29,6 +30,12 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin, {
     tempFolderName: "_tmp",
     viteOptions,
+  });
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    transformOnRequest: false,
+    formats: ["avif", "webp", "jpeg"],
+    widths: [200, 500, 1000, "auto"],
   });
 
   eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
