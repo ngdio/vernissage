@@ -17,13 +17,13 @@ export function BaseLayout({ content, title, description, scripts, page, childre
             {scripts}
         </head>
 
-        <body class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+        <body class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 animate-fade-in transition duration-500">
             <Header page={page} />
             <div class="container mx-auto">
             {content || children}
             </div>
             <Footer />
-            <script type="module" src="/assets/js/main.js"></script>
+            {/* <script type="module" src="/assets/js/main.js"></script> */}
         </body>
         </html>
     )

@@ -29,3 +29,21 @@
   60% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
 }
+
+@utility animate-fade-in {
+  animation: 1s fade-in 0s ease-in-out
+}
+
+@utility animate-fade-in-index {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: fade-in;
+  animation-delay: calc(0.2s * var(--i));
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
