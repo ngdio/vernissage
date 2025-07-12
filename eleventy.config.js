@@ -40,13 +40,13 @@ export default async function(eleventyConfig) {
 
   eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
 		key: "11ty.js",
-		compile: function () {
-			return async function (data) {
-				let content = await this.defaultRenderer(data);
-        const result = await jsxToString(content);
-        return `<!doctype html>\n${result}`;
-			};
-		},
+		compile: async function (inputContent, inputPath) {
+      this.addDependencies(inputPath, ["./src/includes/header.tsx"]);
+      return async function (data) {
+        let content = await this.defaultRenderer(data);
+        return jsxToString(content);
+      };
+    },
 	});
   
   eleventyConfig.addTemplateFormats("11ty.ts,11ty.tsx");
