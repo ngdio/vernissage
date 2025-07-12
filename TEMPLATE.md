@@ -91,6 +91,7 @@ This project is a web-based portfolio that beautifully showcases the photography
 Create your own page with one click on [Netlify](https://app.netlify.com/signup):
 
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/JoaoFranco03/photography-portfolio)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎯 Getting Started <a name="getting-started"></a>
@@ -111,6 +112,7 @@ To get a local copy up and running follow these simple example steps.
 ```sh
  npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
+
 3.  Run the Project in a Server
 
 4.  Change it with your own photos, about me and contact info.

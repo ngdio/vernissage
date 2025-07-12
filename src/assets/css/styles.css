@@ -12,7 +12,7 @@
 @utility smooth-edges {
   backface-visibility: hidden;
 }
-  
+
 @utility animate-wave {
   animation: wave 2.5s infinite;
   transform-origin: 70% 70%;
@@ -20,18 +20,34 @@
 }
 
 @keyframes wave {
-  0% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  30% { transform: rotate(14deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @utility animate-fade-in {
-  animation: 1s fade-in 0s ease-in-out
+  animation: 1s fade-in 0s ease-in-out;
 }
 
 @utility animate-fade-in-index {
@@ -44,6 +60,10 @@
 }
 
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,4 +1,4 @@
-import { BaseLayout } from "./base.11ty";
+import { BaseLayout } from "./base.11ty"
 import { Image } from "../includes/image"
 import { ViewProps } from "../props"
 
@@ -23,16 +23,24 @@ export function GridPage({ page, cols, images }: GridPageProps): JSX.Element {
       <h1 class="text-4xl pt-10 pb-8 font-bold">PORTFOLIO</h1>
       <section class="text-neutral-700">
         <div class="container w-full">
-          <div class={`grid grid-cols-${cols} gap-2 auto-rows-[90px] w-full`} id="gallery-index">
-            {images.map(( img, index ) => {
-              let className = "overflow-hidden";
-              if (img.rows && img.rows > 1) className += ` row-span-${img.rows}`;
-              if (img.cols && img.cols > 1) className += ` col-span-${img.cols}`;
+          <div
+            class={`grid grid-cols-${cols} gap-2 auto-rows-[90px] w-full`}
+            id="gallery-index">
+            {images.map((img, index) => {
+              let className = "overflow-hidden"
+              if (img.rows && img.rows > 1) className += ` row-span-${img.rows}`
+              if (img.cols && img.cols > 1) className += ` col-span-${img.cols}`
               return (
                 <div class={className}>
-                  <Image path={img.path} width={img.width+''} height={img.height+''} alt={img.alt} index={index} />
+                  <Image
+                    path={img.path}
+                    width={img.width + ""}
+                    height={img.height + ""}
+                    alt={img.alt}
+                    index={index}
+                  />
                 </div>
-              );
+              )
             })}
           </div>
         </div>

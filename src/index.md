@@ -86,5 +86,4 @@ images:
     width: 870
     height: 1160
     alt: a flock of seaguls flying over a body of water
-
 ---
