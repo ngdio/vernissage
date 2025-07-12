@@ -20,7 +20,6 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
-    "alpinejs": "^3.14.9",
     "autoprefixer": "^10.4.21",
     "jsx-async-runtime": "^1.0.3",
     "photoswipe": "^5.4.4",

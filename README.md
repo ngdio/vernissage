@@ -1,6 +1,6 @@
 # Vernissage
 
-A portfolio website theme for photographers, artists, and designers using the [Eleventy](https://www.11ty.dev) static site generator. The template is built upon on [Tailwind CSS](https://tailwindcss.com), [Alpine.js](https://alpinejs.dev) and [PhotoSwipe](https://photoswipe.com).
+A portfolio website theme for photographers, artists, and designers using the [Eleventy](https://www.11ty.dev) static site generator. The template is built upon on [Tailwind CSS](https://tailwindcss.com) and [PhotoSwipe](https://photoswipe.com).
 
 The theme is based on the [photography portfolio](https://github.com/JoaoFranco03/photography-portfolio) originally created by [João Franco](https://github.com/JoaoFranco03).
 
