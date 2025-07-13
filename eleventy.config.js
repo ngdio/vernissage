@@ -4,6 +4,7 @@ import ViteTailwindPlugin from "@tailwindcss/vite"
 import "tsx/esm"
 import { jsxToString } from "jsx-async-runtime"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import { register } from "tsx/esm/api";
 
 const viteOptions = {
   publicDir: "public",
@@ -38,7 +39,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
     key: "11ty.js",
     compile: async function (inputContent, inputPath) {
-      this.addDependencies(inputPath, ["./src/includes/header.tsx"])
+      this.addDependencies(inputPath, ["./src/props.tsx"])
+      this.addDependencies("./src/layouts/grid.11ty.tsx", ["./src/layouts/base.11ty.tsx", "./src/includes/image.tsx"])
+      this.addDependencies("./src/layouts/base.11ty.tsx", ["./src/includes/header.tsx", "./src/includes/footer.tsx"])
       return async function (data) {
         let content = await this.defaultRenderer(data)
         return jsxToString(content)
@@ -46,14 +49,22 @@ export default async function (eleventyConfig) {
     },
   })
 
-  eleventyConfig.addTemplateFormats("11ty.ts,11ty.tsx")
-
   eleventyConfig.addWatchTarget("src/includes")
 
   eleventyConfig.addPassthroughCopy("src/assets")
 
+  let unregister;
+	eleventyConfig.on("eleventy.before", () => {
+		unregister = register({
+			tsconfig: "./tsconfig.json",
+		});
+	});
+	eleventyConfig.on("eleventy.after", () => {
+		unregister();
+	});
+
   return {
-    templateFormats: ["md", "html", "tsx"],
+    templateFormats: ["md", "html", "11ty.jsx", "11ty.tsx"],
     htmlTemplateEngine: false,
     passthroughFileCopy: true,
     dir: {
