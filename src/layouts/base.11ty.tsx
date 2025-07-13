@@ -1,5 +1,3 @@
-import { JSX } from "react"
-
 import { ViewProps } from "../props"
 import { Header } from "../includes/header"
 import { Footer } from "../includes/footer"
@@ -12,7 +10,7 @@ export function BaseLayout({
   scripts,
   page,
   children,
-}: ViewProps): JSX.Element {
+}: ViewProps) {
   return (
     <html lang={meta.lang} class="scroll-smooth">
       <head>

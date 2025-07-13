@@ -1,5 +1,3 @@
-import { JSX } from "react"
-
 import { BaseLayout } from "./base.11ty"
 import { Image } from "../includes/image"
 import { ViewProps } from "../props"
@@ -18,7 +16,7 @@ export interface GridPageProps extends ViewProps {
   images: GridPageImage[]
 }
 
-export function GridPage({ page, cols, images }: GridPageProps): JSX.Element {
+export function GridPage({ page, cols, images }: GridPageProps) {
   return (
     <BaseLayout page={page}>
       <script type="module" src="/assets/js/lightbox.js"></script>
