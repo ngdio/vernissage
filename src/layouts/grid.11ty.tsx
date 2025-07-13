@@ -24,12 +24,12 @@ export function GridPage({ page, cols, images }: GridPageProps) {
       <section class="text-neutral-700">
         <div class="container w-full">
           <div
-            class={`grid grid-cols-${cols} gap-2 auto-rows-[90px] w-full`}
+            class={`grid gap-2 grid-cols-1 md:grid-cols-${cols} md:auto-rows-[90px] w-full`}
             id="gallery-index">
             {images.map((img, index) => {
               let className = "overflow-hidden"
-              if (img.rows && img.rows > 1) className += ` row-span-${img.rows}`
-              if (img.cols && img.cols > 1) className += ` col-span-${img.cols}`
+              if (img.rows && img.rows > 1) className += ` md:row-span-${img.rows}`
+              if (img.cols && img.cols > 1) className += ` md:col-span-${img.cols}`
               return (
                 <div class={className}>
                   <Image
