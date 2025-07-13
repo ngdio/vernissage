@@ -1,3 +1,5 @@
+import { JSX } from "react"
+
 import { BaseLayout } from "./base.11ty"
 import { Image } from "../includes/image"
 import { ViewProps } from "../props"

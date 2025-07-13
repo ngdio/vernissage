@@ -1,3 +1,5 @@
+import { JSX } from "react"
+
 import { ViewProps } from "../props"
 import { Header } from "../includes/header"
 import { Footer } from "../includes/footer"
